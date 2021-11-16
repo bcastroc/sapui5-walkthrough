@@ -1,0 +1,7 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+      "id": "Walkthrough SAPUI5 Demo",
+      "type": "application"
+  }
+}

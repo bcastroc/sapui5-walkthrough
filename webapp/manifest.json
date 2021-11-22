@@ -3,7 +3,7 @@
   "sap.app": {
 	  "id": "sap.ui.demo.walkthrough",
 	  "type": "application",
-	  "i18n": "i18n/i18n_en.properties",
+	  "i18n": "i18n/i18n.properties",
 	  "title": "{{appTitle}}",
 	  "description": "{{appDescription}}",
 	  "applicationVersion": {
@@ -32,21 +32,25 @@
 	    }
 	  },
 	  "models": {
-	    "i18n_en": {
+	    "i18n": {
 		    "type": "sap.ui.model.resource.ResourceModel",
 		    "settings": {
-		      "bundleName": "sap.ui.demo.walkthrough.i18n.i18n_en",
+		      "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
 		      "supportedLocales": [""],
 		      "fallbackLocale": ""
 		    }
-	    }
-	  },
+	    },
+      "invoice": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "models/Invoices.json"
+      }
+	  },    
     "resources": {
       "css": [
         {
           "uri": "css/style.css"
         }
       ]
-    }
+    }    
   }
 }

@@ -9,12 +9,16 @@ sap.ui.define([
 
 	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
     formatter : formatter,
-		onInit : function () {
+		
+    //onInit
+    onInit : function () {
 			var oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
 		},
+    
+    //onFilterInvoices
     onFilterInvoices : function (oEvent) {
 
       //build filter array
@@ -29,7 +33,13 @@ sap.ui.define([
       var oBinding = oList.getBinding("items");
       oBinding.filter(aFilter);
       
-    }
+    },
+
+    //onPress
+    onPress: function (oEvent) {
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail");
+		}
 
 	});
 });
